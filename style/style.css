@@ -11,48 +11,103 @@ body, html{
 }
 
 #navigation-bar-container{
-    height: 80px;
+    width: 100%;
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+    padding: 20px 10px 10px 10px;
+    margin: auto;
+}
+
+#navigation-bar-container hr {
+    display: none;
+}
+
+#logo, #cart {
+    display: flex;
+    justify-content: center;
 }
 
 #redstore-logo{
-    width: 120px;
-    margin-left: 20px;
+    width: 200px;
 }
 
 #navigation-bar-container > div {
-    display:inline-block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
 }
 
 #nav-text-element-container {
-    flex: 1;
-    text-align: right;
-
+    margin: 0px 5px 0px 5px;
 }
 
 #nav-text-element-container > ul {
-    align-items: center;
+    display: flex;
+
     list-style: none;
-    display: inline-block;
+    
 }
 #nav-text-element-container > ul li {
-    display: inline-block;
-    margin-left: 15px;
+    margin: 0px 10px 0px 10px;
 }
 
 #cart-logo {
-    width: 30px;
-    margin-right: 15px;
-    margin-left: 15px;
+    width: 40px;
+}
+
+@media only screen and (max-width: 780px) {
+
+    #navigation-bar-container {
+        flex-direction: column;
+    }
+
+    #navigation-bar-container hr {
+        display: block;
+        width: 50%;
+        height: 1px;
+        border: 1px solid rgba(255, 71, 71, 0.705);
+    }
+
+    #navigation-bar-container > div {
+        width: 100%;
+        display: inline-block;
+    }
+
+    #logo {
+        text-align: left;
+    }
+
+    #nav-text-element-container ul {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nav-text-element-container > ul li {
+        margin: 0px 5px 0px 5px;
+    }
+
+    #cart {
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    #navigation-bar-container hr {
+        width: 45%;
+    }
+
+    #nav-text-element-container ul {
+        flex-flow: column;
+    }
 }
 
 a{
     text-decoration: none;
     color: #555;
-    font-size: large;
+    font-size: 1.4rem;
     font-weight: 100;
 }
 
